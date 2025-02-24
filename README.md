@@ -1,5 +1,6 @@
 # Mock
 
+A Basic crud app using  Lazy Loading and Route Guards,Nested Routing,Dynamic Route Parameters,Forms Handling,Bootstrap Integration and Role-Based Components
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
 ## Development server
