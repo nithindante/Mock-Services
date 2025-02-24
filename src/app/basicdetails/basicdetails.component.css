@@ -1,0 +1,18 @@
+.basicDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.spanFOrm {
+  display: flex;
+  flex-direction: column;
+}
+
+.spanFOrm > span {
+  width: 30%;
+}
+
+.selected {
+  background-color: blueviolet;
+}

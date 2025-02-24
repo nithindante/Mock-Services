@@ -1,0 +1,30 @@
+<p>My basic div</p>
+<div *ngFor="let detail of details" class="basicDiv">
+  <span>{{ detail.id }}</span>
+  <span>{{ detail.email }}</span
+  ><span>{{ detail.name }}</span>
+  <nav>
+    <button routerLink="/userlist/{{ detail.id }}">Redirect</button>
+    <router-outlet></router-outlet>
+  </nav>
+</div>
+<a routerLink="/forms">Redirect To Forms</a>
+<router-outlet></router-outlet>
+
+<li class="spanFOrm" *ngFor="let arrs of arr">
+  <span
+    [ngStyle]="{
+      'background-color':
+        arrs.hovered || arrs.selected ? '#FF0000' : 'transparent'
+    }"
+    (click)="OnHover(arrs)"
+    (mouseover)="arrs.hovered = true"
+    (mouseout)="arrs.hovered = false"
+    >{{ arrs.name }}</span
+  >
+</li>
+
+<div>
+  <div><button routerLink="route">Route</button></div>
+  <router-outlet></router-outlet>
+</div>

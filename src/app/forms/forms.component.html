@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)]="user.name" name="name" required />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="user.email"
+      name="email"
+      required
+      email
+    />
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<div class="container-fluid" id="bootstrap-overrides">
+  <form [formGroup]="profileForm" (ngSubmit)="onClick()">
+    <label for="fname">First Name</label>
+    <input
+      type="text"
+      id="fname"
+      formControlName="fname"
+      [ngClass]="{ 'is-invalid': 'action().fname.errors' }"
+    />
+    <div *ngIf="action().fname.errors">Enter a valid name</div>
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" />
+    <div *ngIf="action().email.errors">Enter a valid email</div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="profileForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>
